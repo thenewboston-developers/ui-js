@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Icon, IconProps, IconType } from './index';
 import './IconStories.scss';
-import '../styles/colors.css';
+import '../../styles/colors.css';
 
 const meta: Meta = {
   title: 'Icon',
