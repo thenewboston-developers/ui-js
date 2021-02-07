@@ -35,8 +35,13 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "ui",
-  "author": "Justin Kim",
+  "name": "@thenewboston/ui",
+  "description": "UI Library for the thenewboston community",
+  "keywords": [
+    "thenewboston"
+  ],
+  "homepage": "https://github.com/thenewboston-developers/ui-js",
+  "author": "thenewboston",
   "module": "dist/ui.esm.js",
   "size-limit": [
     {
