@@ -193,125 +193,140 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
     };
 
     const renderIcon = useCallback((): ReactNode => {
+      const iconBaseProps = {
+        'data-testid': 'svg',
+      };
+
       switch (icon) {
         case IconType.accountGroup:
-          return <AccountGroupIcon size={size || 24} />;
+          return <AccountGroupIcon {...iconBaseProps} size={size || 24} />;
         case IconType.alert:
-          return <AlertIcon size={size || 24} />;
+          return <AlertIcon {...iconBaseProps} size={size || 24} />;
         case IconType.alertCircleOutline:
-          return <AlertCircleOutlineIcon size={size || 24} />;
+          return (
+            <AlertCircleOutlineIcon {...iconBaseProps} size={size || 24} />
+          );
         case IconType.arrowCollapseDown:
-          return <ArrowCollapseDownIcon size={size || 22} />;
+          return <ArrowCollapseDownIcon {...iconBaseProps} size={size || 22} />;
         case IconType.arrowDown:
-          return <ArrowDownIcon size={size || 24} />;
+          return <ArrowDownIcon {...iconBaseProps} size={size || 24} />;
         case IconType.arrowLeft:
-          return <ArrowLeftIcon size={size || 24} />;
+          return <ArrowLeftIcon {...iconBaseProps} size={size || 24} />;
         case IconType.arrowRight:
-          return <ArrowRightIcon size={size || 24} />;
+          return <ArrowRightIcon {...iconBaseProps} size={size || 24} />;
         case IconType.arrowUp:
-          return <ArrowUpIcon size={size || 24} />;
+          return <ArrowUpIcon {...iconBaseProps} size={size || 24} />;
         case IconType.bell:
-          return <BellIcon size={size || 22} />;
+          return <BellIcon {...iconBaseProps} size={size || 22} />;
         case IconType.checkboxBlankCircle:
-          return <CheckboxBlankCircleIcon size={size || 24} />;
+          return (
+            <CheckboxBlankCircleIcon {...iconBaseProps} size={size || 24} />
+          );
         case IconType.checkboxBlankCircleOutline:
-          return <CheckboxBlankCircleOutlineIcon size={size || 24} />;
+          return (
+            <CheckboxBlankCircleOutlineIcon
+              {...iconBaseProps}
+              size={size || 24}
+            />
+          );
         case IconType.checkboxBlankOutline:
-          return <CheckboxBlankOutlineIcon size={size || 24} />;
+          return (
+            <CheckboxBlankOutlineIcon {...iconBaseProps} size={size || 24} />
+          );
         case IconType.checkboxMarked:
-          return <CheckboxMarkedIcon size={size || 24} />;
+          return <CheckboxMarkedIcon {...iconBaseProps} size={size || 24} />;
         case IconType.chevronDown:
-          return <ChevronDownIcon size={size || 24} />;
+          return <ChevronDownIcon {...iconBaseProps} size={size || 24} />;
         case IconType.chevronLeft:
-          return <ChevronLeftIcon size={size || 24} />;
+          return <ChevronLeftIcon {...iconBaseProps} size={size || 24} />;
         case IconType.chevronRight:
-          return <ChevronRightIcon size={size || 24} />;
+          return <ChevronRightIcon {...iconBaseProps} size={size || 24} />;
         case IconType.chevronUp:
-          return <ChevronUpIcon size={size || 24} />;
+          return <ChevronUpIcon {...iconBaseProps} size={size || 24} />;
         case IconType.close:
-          return <CloseIcon size={size || 24} />;
+          return <CloseIcon {...iconBaseProps} size={size || 24} />;
         case IconType.contentCopy:
-          return <ContentCopyIcon size={size || 22} />;
+          return <ContentCopyIcon {...iconBaseProps} size={size || 22} />;
         case IconType.currencyUsd:
-          return <CurrencyUsdIcon size={size || 24} />;
+          return <CurrencyUsdIcon {...iconBaseProps} size={size || 24} />;
         case IconType.devTo:
-          return <DevToIcon size={size || 24} />;
+          return <DevToIcon {...iconBaseProps} size={size || 24} />;
         case IconType.discord:
-          return <DiscordIcon size={size || 20} />;
+          return <DiscordIcon {...iconBaseProps} size={size || 20} />;
         case IconType.dotsVertical:
-          return <DotsVerticalIcon size={size || 24} />;
+          return <DotsVerticalIcon {...iconBaseProps} size={size || 24} />;
         case IconType.download:
-          return <DownloadIcon size={size || 24} />;
+          return <DownloadIcon {...iconBaseProps} size={size || 24} />;
         case IconType.earth:
-          return <EarthIcon size={size || 24} />;
+          return <EarthIcon {...iconBaseProps} size={size || 24} />;
         case IconType.eye:
-          return <EyeIcon size={size || 22} />;
+          return <EyeIcon {...iconBaseProps} size={size || 22} />;
         case IconType.eyeOff:
-          return <EyeOffIcon size={size || 22} />;
+          return <EyeOffIcon {...iconBaseProps} size={size || 22} />;
         case IconType.facebook:
-          return <FacebookIcon size={size || 24} />;
+          return <FacebookIcon {...iconBaseProps} size={size || 24} />;
         case IconType.fileDocument:
-          return <FileDocumentIcon size={size || 24} />;
+          return <FileDocumentIcon {...iconBaseProps} size={size || 24} />;
         case IconType.fileDownload:
-          return <FileDownloadIcon size={size || 24} />;
+          return <FileDownloadIcon {...iconBaseProps} size={size || 24} />;
         case IconType.forum:
-          return <ForumIcon size={size || 24} />;
+          return <ForumIcon {...iconBaseProps} size={size || 24} />;
         case IconType.github:
-          return <GithubIcon size={size || 24} />;
+          return <GithubIcon {...iconBaseProps} size={size || 24} />;
         case IconType.hammerWrench:
-          return <HammerWrenchIcon size={size || 24} />;
+          return <HammerWrenchIcon {...iconBaseProps} size={size || 24} />;
         case IconType.humanHandsup:
-          return <HumanHandsupIcon size={size || 24} />;
+          return <HumanHandsupIcon {...iconBaseProps} size={size || 24} />;
         case IconType.lanConnect:
-          return <LanConnectIcon size={size || 24} />;
+          return <LanConnectIcon {...iconBaseProps} size={size || 24} />;
         case IconType.lanDisconnect:
-          return <LanDisconnectIcon size={size || 24} />;
+          return <LanDisconnectIcon {...iconBaseProps} size={size || 24} />;
         case IconType.link:
-          return <LinkIcon size={size || 24} />;
+          return <LinkIcon {...iconBaseProps} size={size || 24} />;
         case IconType.linkedin:
-          return <LinkedinIcon size={size || 24} />;
+          return <LinkedinIcon {...iconBaseProps} size={size || 24} />;
         case IconType.loading:
-          return <LoadingIcon size={size || 24} />;
+          return <LoadingIcon {...iconBaseProps} size={size || 24} />;
         case IconType.menu:
-          return <MenuIcon size={size || 24} />;
+          return <MenuIcon {...iconBaseProps} size={size || 24} />;
         case IconType.menuRight:
-          return <MenuRightIcon size={size || 24} />;
+          return <MenuRightIcon {...iconBaseProps} size={size || 24} />;
         case IconType.minus:
-          return <MinusIcon size={size || 24} />;
+          return <MinusIcon {...iconBaseProps} size={size || 24} />;
         case IconType.pencil:
-          return <PencilIcon size={size || 24} />;
+          return <PencilIcon {...iconBaseProps} size={size || 24} />;
         case IconType.play:
-          return <PlayIcon size={size || 24} />;
+          return <PlayIcon {...iconBaseProps} size={size || 24} />;
         case IconType.plus:
-          return <PlusIcon size={size || 24} />;
+          return <PlusIcon {...iconBaseProps} size={size || 24} />;
         case IconType.radioboxBlank:
-          return <RadioboxBlankIcon size={size || 24} />;
+          return <RadioboxBlankIcon {...iconBaseProps} size={size || 24} />;
         case IconType.radioboxMarked:
-          return <RadioboxMarkedIcon size={size || 24} />;
+          return <RadioboxMarkedIcon {...iconBaseProps} size={size || 24} />;
         case IconType.reddit:
-          return <RedditIcon size={size || 24} />;
+          return <RedditIcon {...iconBaseProps} size={size || 24} />;
         case IconType.refresh:
-          return <RefreshIcon size={size || 24} />;
+          return <RefreshIcon {...iconBaseProps} size={size || 24} />;
         case IconType.slack:
-          return <SlackIcon size={size || 24} />;
+          return <SlackIcon {...iconBaseProps} size={size || 24} />;
         case IconType.sortAscending:
-          return <SortAscendingIcon size={size || 22} />;
+          return <SortAscendingIcon {...iconBaseProps} size={size || 22} />;
         case IconType.sortDescending:
-          return <SortDescendingIcon size={size || 22} />;
+          return <SortDescendingIcon {...iconBaseProps} size={size || 22} />;
         case IconType.sync:
-          return <SyncIcon size={size || 24} />;
+          return <SyncIcon {...iconBaseProps} size={size || 24} />;
         case IconType.thumbsUp:
-          return <ThumbsUpIcon size={size || 20} />;
+          return <ThumbsUpIcon {...iconBaseProps} size={size || 20} />;
         case IconType.tnb:
-          return <TnbIcon size={size || 24} />;
+          return <TnbIcon {...iconBaseProps} size={size || 24} />;
         case IconType.trophy:
-          return <TrophyIcon size={size || 22} />;
+          return <TrophyIcon {...iconBaseProps} size={size || 22} />;
         case IconType.twitch:
-          return <TwitchIcon size={size || 24} />;
+          return <TwitchIcon {...iconBaseProps} size={size || 24} />;
         case IconType.twitter:
-          return <TwitterIcon size={size || 24} />;
+          return <TwitterIcon {...iconBaseProps} size={size || 24} />;
         case IconType.youtube:
-          return <YoutubeIcon size={size || 24} />;
+          return <YoutubeIcon {...iconBaseProps} size={size || 24} />;
         default:
           return null;
       }
@@ -324,6 +339,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           'Icon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),
         })}
+        data-testid="icon"
         ref={ref}
         role={!!onClick ? 'button' : 'img'}
         onClick={handleClick}
