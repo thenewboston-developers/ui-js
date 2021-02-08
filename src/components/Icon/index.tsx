@@ -2,73 +2,129 @@ import React, { forwardRef, ReactNode, useCallback, useMemo } from 'react';
 import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
+import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
 import AlertIcon from 'mdi-react/AlertIcon';
+import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
+import ArrowDownIcon from 'mdi-react/ArrowDownIcon';
 import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
 import ArrowRightIcon from 'mdi-react/ArrowRightIcon';
+import ArrowUpIcon from 'mdi-react/ArrowUpIcon';
 import BellIcon from 'mdi-react/BellIcon';
 import CheckboxBlankCircleIcon from 'mdi-react/CheckboxBlankCircleIcon';
 import CheckboxBlankCircleOutlineIcon from 'mdi-react/CheckboxBlankCircleOutlineIcon';
 import CheckboxBlankOutlineIcon from 'mdi-react/CheckboxBlankOutlineIcon';
 import CheckboxMarkedIcon from 'mdi-react/CheckboxMarkedIcon';
+import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
+import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import CloseIcon from 'mdi-react/CloseIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
+import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
 import DevToIcon from 'mdi-react/DevToIcon';
+import DiscordIcon from 'mdi-react/DiscordIcon';
 import DotsVerticalIcon from 'mdi-react/DotsVerticalIcon';
 import DownloadIcon from 'mdi-react/DownloadIcon';
+import EarthIcon from 'mdi-react/EarthIcon';
 import EyeIcon from 'mdi-react/EyeIcon';
 import EyeOffIcon from 'mdi-react/EyeOffIcon';
+import FacebookIcon from 'mdi-react/FacebookIcon';
+import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
+import FileDownloadIcon from 'mdi-react/FileDownloadIcon';
+import ForumIcon from 'mdi-react/ForumIcon';
+import GithubIcon from 'mdi-react/GithubIcon';
+import HammerWrenchIcon from 'mdi-react/HammerWrenchIcon';
+import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
 import LanConnectIcon from 'mdi-react/LanConnectIcon';
 import LanDisconnectIcon from 'mdi-react/LanDisconnectIcon';
 import LinkIcon from 'mdi-react/LinkIcon';
+import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
+import MenuIcon from 'mdi-react/MenuIcon';
+import MenuRightIcon from 'mdi-react/MenuRightIcon';
+import MinusIcon from 'mdi-react/MinusIcon';
 import PencilIcon from 'mdi-react/PencilIcon';
 import PlayIcon from 'mdi-react/PlayIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
 import RadioboxMarkedIcon from 'mdi-react/RadioboxMarkedIcon';
+import RedditIcon from 'mdi-react/RedditIcon';
 import RefreshIcon from 'mdi-react/RefreshIcon';
+import SlackIcon from 'mdi-react/SlackIcon';
+import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
+import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
 import SyncIcon from 'mdi-react/SyncIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
+import TrophyIcon from 'mdi-react/TrophyIcon';
+import TwitchIcon from 'mdi-react/TwitchIcon';
+import TwitterIcon from 'mdi-react/TwitterIcon';
+import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
 import TnbIcon from './TnbIcon';
 import './Icon.scss';
 
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
 export enum IconType {
+  accountGroup = 'account-group',
   alert = 'alert',
   alertCircleOutline = 'alert-circle-outline',
+  arrowCollapseDown = 'arrow-collapse-down',
+  arrowDown = 'arrow-down',
   arrowLeft = 'arrow-left',
   arrowRight = 'arrow-right',
+  arrowUp = 'arrow-up',
   bell = 'bell',
   checkboxBlankCircle = 'checkbox-blank-circle',
   checkboxBlankCircleOutline = 'checkbox-blank-circle-outline',
   checkboxBlankOutline = 'checkbox-blank-outline',
   checkboxMarked = 'checkbox-marked',
+  chevronDown = 'chevron-down',
   chevronLeft = 'chevron-left',
   chevronRight = 'chevron-right',
+  chevronUp = 'chevron-up',
   close = 'close',
   contentCopy = 'content-copy',
+  currencyUsd = 'currency-usd',
   devTo = 'dev-to',
+  discord = 'discord',
   dotsVertical = 'dots-vertical',
   download = 'download',
+  earth = 'earth',
   eye = 'eye',
   eyeOff = 'eye-off',
+  facebook = 'facebook',
+  fileDocument = 'file-document',
+  fileDownload = 'file-download',
+  forum = 'forum',
+  github = 'github',
+  hammerWrench = 'hammer-wrench',
+  humanHandsup = 'human-handsup',
   lanConnect = 'lan-connect',
   lanDisconnect = 'lan-disconnect',
   link = 'link',
+  linkedin = 'linkedin',
   loading = 'loading',
+  menu = 'menu',
+  menuRight = 'menu-right',
+  minus = 'minus',
   pencil = 'pencil',
   play = 'play',
   plus = 'plus',
   radioboxBlank = 'radiobox-blank',
   radioboxMarked = 'radiobox-marked',
+  reddit = 'reddit',
   refresh = 'refresh',
+  slack = 'slack',
+  sortAscending = 'sort-ascending',
+  sortDescending = 'sort-descending',
   sync = 'sync',
   thumbsUp = 'thumbs-up',
   tnb = 'tnb',
+  trophy = 'trophy',
+  twitch = 'twitch',
+  twitter = 'twitter',
+  youtube = 'youtube',
 }
 
 export interface IconProps {
@@ -113,10 +169,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
       return { height: divSize, width: divSize };
     }, [size, totalSize]);
 
-    const tabIndex = useMemo(() => (unfocusable || !onClick ? undefined : 0), [
-      onClick,
-      unfocusable,
-    ]);
+    const tabIndex = useMemo(
+      () => (unfocusable || disabled || !onClick ? undefined : 0),
+      [disabled, onClick, unfocusable]
+    );
 
     const handleClick = (
       e?: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -138,14 +194,22 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
 
     const renderIcon = useCallback((): ReactNode => {
       switch (icon) {
+        case IconType.accountGroup:
+          return <AccountGroupIcon size={size || 24} />;
         case IconType.alert:
           return <AlertIcon size={size || 24} />;
         case IconType.alertCircleOutline:
           return <AlertCircleOutlineIcon size={size || 24} />;
+        case IconType.arrowCollapseDown:
+          return <ArrowCollapseDownIcon size={size || 22} />;
+        case IconType.arrowDown:
+          return <ArrowDownIcon size={size || 24} />;
         case IconType.arrowLeft:
           return <ArrowLeftIcon size={size || 24} />;
         case IconType.arrowRight:
           return <ArrowRightIcon size={size || 24} />;
+        case IconType.arrowUp:
+          return <ArrowUpIcon size={size || 24} />;
         case IconType.bell:
           return <BellIcon size={size || 22} />;
         case IconType.checkboxBlankCircle:
@@ -156,32 +220,64 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <CheckboxBlankOutlineIcon size={size || 24} />;
         case IconType.checkboxMarked:
           return <CheckboxMarkedIcon size={size || 24} />;
+        case IconType.chevronDown:
+          return <ChevronDownIcon size={size || 24} />;
         case IconType.chevronLeft:
           return <ChevronLeftIcon size={size || 24} />;
         case IconType.chevronRight:
           return <ChevronRightIcon size={size || 24} />;
+        case IconType.chevronUp:
+          return <ChevronUpIcon size={size || 24} />;
         case IconType.close:
           return <CloseIcon size={size || 24} />;
         case IconType.contentCopy:
           return <ContentCopyIcon size={size || 22} />;
+        case IconType.currencyUsd:
+          return <CurrencyUsdIcon size={size || 24} />;
         case IconType.devTo:
           return <DevToIcon size={size || 24} />;
+        case IconType.discord:
+          return <DiscordIcon size={size || 20} />;
         case IconType.dotsVertical:
           return <DotsVerticalIcon size={size || 24} />;
         case IconType.download:
           return <DownloadIcon size={size || 24} />;
+        case IconType.earth:
+          return <EarthIcon size={size || 24} />;
         case IconType.eye:
           return <EyeIcon size={size || 22} />;
         case IconType.eyeOff:
           return <EyeOffIcon size={size || 22} />;
+        case IconType.facebook:
+          return <FacebookIcon size={size || 24} />;
+        case IconType.fileDocument:
+          return <FileDocumentIcon size={size || 24} />;
+        case IconType.fileDownload:
+          return <FileDownloadIcon size={size || 24} />;
+        case IconType.forum:
+          return <ForumIcon size={size || 24} />;
+        case IconType.github:
+          return <GithubIcon size={size || 24} />;
+        case IconType.hammerWrench:
+          return <HammerWrenchIcon size={size || 24} />;
+        case IconType.humanHandsup:
+          return <HumanHandsupIcon size={size || 24} />;
         case IconType.lanConnect:
           return <LanConnectIcon size={size || 24} />;
         case IconType.lanDisconnect:
           return <LanDisconnectIcon size={size || 24} />;
         case IconType.link:
           return <LinkIcon size={size || 24} />;
+        case IconType.linkedin:
+          return <LinkedinIcon size={size || 24} />;
         case IconType.loading:
           return <LoadingIcon size={size || 24} />;
+        case IconType.menu:
+          return <MenuIcon size={size || 24} />;
+        case IconType.menuRight:
+          return <MenuRightIcon size={size || 24} />;
+        case IconType.minus:
+          return <MinusIcon size={size || 24} />;
         case IconType.pencil:
           return <PencilIcon size={size || 24} />;
         case IconType.play:
@@ -192,14 +288,30 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <RadioboxBlankIcon size={size || 24} />;
         case IconType.radioboxMarked:
           return <RadioboxMarkedIcon size={size || 24} />;
+        case IconType.reddit:
+          return <RedditIcon size={size || 24} />;
         case IconType.refresh:
           return <RefreshIcon size={size || 24} />;
+        case IconType.slack:
+          return <SlackIcon size={size || 24} />;
+        case IconType.sortAscending:
+          return <SortAscendingIcon size={size || 22} />;
+        case IconType.sortDescending:
+          return <SortDescendingIcon size={size || 22} />;
         case IconType.sync:
           return <SyncIcon size={size || 24} />;
         case IconType.thumbsUp:
           return <ThumbsUpIcon size={size || 20} />;
         case IconType.tnb:
           return <TnbIcon size={size || 24} />;
+        case IconType.trophy:
+          return <TrophyIcon size={size || 22} />;
+        case IconType.twitch:
+          return <TwitchIcon size={size || 24} />;
+        case IconType.twitter:
+          return <TwitterIcon size={size || 24} />;
+        case IconType.youtube:
+          return <YoutubeIcon size={size || 24} />;
         default:
           return null;
       }
@@ -213,6 +325,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           ...bemify(className, '--disabled', disabled),
         })}
         ref={ref}
+        role={!!onClick ? 'button' : 'img'}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         style={divStyle}
