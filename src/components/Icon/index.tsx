@@ -194,7 +194,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
 
     const renderIcon = useCallback((): ReactNode => {
       const iconBaseProps = {
-        'data-testid': 'svg',
+        'data-testid': 'icon__svg',
       };
 
       switch (icon) {
