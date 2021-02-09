@@ -21,7 +21,7 @@ describe('Icon', () => {
 
     it('renders with proper role', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon).toHaveAttribute('role', 'img');
       expect(icon).not.toHaveAttribute('role', 'button');
@@ -29,28 +29,28 @@ describe('Icon', () => {
 
     it('renders with proper default className', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon.className).toBe('Icon');
     });
 
     it('renders without the --button className', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon.className).not.toContain('Icon--button');
     });
 
     it('renders with className passed in', () => {
       render(<Icon {...props} className="test" />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon.className).toContain('test');
     });
 
     it('renders with size passed in', () => {
       render(<Icon {...props} size={100} />);
-      const svg = screen.getByTestId('icon__svg');
+      const svg = screen.getByTestId('Icon__svg');
 
       expect(svg).toHaveAttribute('height', '100');
       expect(svg).toHaveAttribute('width', '100');
@@ -58,7 +58,7 @@ describe('Icon', () => {
 
     it('renders with total size passed in', () => {
       render(<Icon {...props} totalSize={100} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon.style).toHaveProperty('height', '100px');
       expect(icon.style).toHaveProperty('width', '100px');
@@ -66,8 +66,8 @@ describe('Icon', () => {
 
     it('renders with proper total size when totalSize < size', () => {
       render(<Icon {...props} size={100} totalSize={50} />);
-      const icon = screen.getByTestId('icon');
-      const svg = screen.getByTestId('icon__svg');
+      const icon = screen.getByTestId('Icon');
+      const svg = screen.getByTestId('Icon__svg');
 
       expect(svg).toHaveAttribute('height', '100');
       expect(svg).toHaveAttribute('width', '100');
@@ -77,7 +77,7 @@ describe('Icon', () => {
 
     it('icon does not have focus when it does not have onClick', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       userEvent.tab();
       expect(icon).not.toHaveFocus();
@@ -106,7 +106,7 @@ describe('Icon', () => {
 
     it('renders with proper role', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon).toHaveAttribute('role', 'button');
       expect(icon).not.toHaveAttribute('role', 'img');
@@ -114,28 +114,28 @@ describe('Icon', () => {
 
     it('renders with the --button className', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon.className).toContain('Icon--button');
     });
 
     it('has --disabled className when disabled', () => {
       render(<Icon {...props} disabled />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon.className).toContain('Icon--disabled');
     });
 
     it('adds --disabled className when disabled and classNames passed', () => {
       render(<Icon {...props} className="test" disabled />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       expect(icon.className).toContain('test--disabled');
     });
 
     it('onClick works properly', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
       fireEvent.click(icon);
 
       expect(consoleSpy).toHaveBeenCalledWith('testing onClick');
@@ -143,7 +143,7 @@ describe('Icon', () => {
 
     it('onClick is disabled properly when disabled', () => {
       render(<Icon {...props} disabled />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
       fireEvent.click(icon);
 
       expect(consoleSpy).not.toHaveBeenCalledWith('testing onClick');
@@ -151,7 +151,7 @@ describe('Icon', () => {
 
     it('icon is focusable when it has onClick', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       userEvent.tab();
       expect(icon).toHaveFocus();
@@ -159,7 +159,7 @@ describe('Icon', () => {
 
     it('icon is not focusable when it has onClick but disabled', () => {
       render(<Icon {...props} disabled />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       userEvent.tab();
       expect(icon).not.toHaveFocus();
@@ -167,7 +167,7 @@ describe('Icon', () => {
 
     it('icon is not focusable when it has onClick and unfocusable', () => {
       render(<Icon {...props} unfocusable />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       userEvent.tab();
       expect(icon).not.toHaveFocus();
@@ -175,7 +175,7 @@ describe('Icon', () => {
 
     it('able to handle keyDown', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       fireEvent.keyDown(icon, { key: 'Up' });
       expect(consoleSpy).toHaveBeenCalledWith('testing onKeyDown');
@@ -183,7 +183,7 @@ describe('Icon', () => {
 
     it('fires onClick when pressing Enter', () => {
       render(<Icon {...props} />);
-      const icon = screen.getByTestId('icon');
+      const icon = screen.getByTestId('Icon');
 
       fireEvent.keyDown(icon, { key: 'Enter' });
       expect(consoleSpy).toHaveBeenCalledWith('testing onKeyDown');

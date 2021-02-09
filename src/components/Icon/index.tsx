@@ -194,7 +194,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
 
     const renderIcon = useCallback((): ReactNode => {
       const iconBaseProps = {
-        'data-testid': 'icon__svg',
+        'data-testid': 'Icon__svg',
       };
 
       switch (icon) {
@@ -339,7 +339,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           'Icon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),
         })}
-        data-testid="icon"
+        data-testid="Icon"
         ref={ref}
         role={!!onClick ? 'button' : 'img'}
         onClick={handleClick}
