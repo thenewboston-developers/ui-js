@@ -85,19 +85,19 @@ describe('Icon', () => {
   });
 
   describe('with onClick', () => {
-    const props = {
-      ...baseProps,
-      onClick: () => {
-        console.log('testing onClick');
-      },
-      onKeyDown: () => {
-        console.log('testing onKeyDown');
-      },
-    };
+    let onClick: jest.Mock;
+    let onKeyDown: jest.Mock;
 
-    let consoleSpy: jest.SpyInstance;
+    let props: IconProps;
+
     beforeEach(() => {
-      consoleSpy = jest.spyOn(console, 'log');
+      onClick = jest.fn();
+      onKeyDown = jest.fn();
+      props = {
+        ...baseProps,
+        onClick,
+        onKeyDown,
+      };
     });
 
     afterEach(() => {
@@ -138,7 +138,7 @@ describe('Icon', () => {
       const icon = screen.getByTestId('Icon');
       fireEvent.click(icon);
 
-      expect(consoleSpy).toHaveBeenCalledWith('testing onClick');
+      expect(onClick).toHaveBeenCalled();
     });
 
     it('onClick is disabled properly when disabled', () => {
@@ -146,7 +146,7 @@ describe('Icon', () => {
       const icon = screen.getByTestId('Icon');
       fireEvent.click(icon);
 
-      expect(consoleSpy).not.toHaveBeenCalledWith('testing onClick');
+      expect(onClick).not.toHaveBeenCalled();
     });
 
     it('icon is focusable when it has onClick', () => {
@@ -178,7 +178,7 @@ describe('Icon', () => {
       const icon = screen.getByTestId('Icon');
 
       fireEvent.keyDown(icon, { key: 'Up' });
-      expect(consoleSpy).toHaveBeenCalledWith('testing onKeyDown');
+      expect(onKeyDown).toHaveBeenCalled();
     });
 
     it('fires onClick when pressing Enter', () => {
@@ -186,8 +186,8 @@ describe('Icon', () => {
       const icon = screen.getByTestId('Icon');
 
       fireEvent.keyDown(icon, { key: 'Enter' });
-      expect(consoleSpy).toHaveBeenCalledWith('testing onKeyDown');
-      expect(consoleSpy).toHaveBeenCalledWith('testing onClick');
+      expect(onKeyDown).toHaveBeenCalled();
+      expect(onClick).toHaveBeenCalled();
     });
   });
 });

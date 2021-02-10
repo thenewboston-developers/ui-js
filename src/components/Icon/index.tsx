@@ -1,4 +1,10 @@
-import React, { forwardRef, ReactNode, useCallback, useMemo } from 'react';
+import React, {
+  forwardRef,
+  HTMLAttributes,
+  ReactNode,
+  useCallback,
+  useMemo,
+} from 'react';
 import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
@@ -127,7 +133,7 @@ export enum IconType {
   youtube = 'youtube',
 }
 
-export interface IconProps {
+export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   /** Optional. Extra classNames you can pass. Storybook options: black, white, primary, secondary, tertiary, alert. */
   className?: string;
   /** Optional. disabled onClick event if onClick is passed. */
