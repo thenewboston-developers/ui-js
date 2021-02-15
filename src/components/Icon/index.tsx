@@ -67,6 +67,7 @@ import TwitchIcon from 'mdi-react/TwitchIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
+import '../../styles/colors.css';
 import TnbIcon from './TnbIcon';
 import './Icon.scss';
 

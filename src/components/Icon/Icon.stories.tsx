@@ -2,12 +2,12 @@ import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import { Icon, IconProps, IconType } from './index';
-import './IconStories.scss';
 import '../../styles/colors.css';
+import './IconStories.scss';
 
 const meta: Meta = {
   title: 'Icon',
-  component: Icon,
+  component: Icon as any,
   argTypes: {
     className: {
       defaultValue: 'primary gray-100-bg',

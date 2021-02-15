@@ -1,4 +1,7 @@
+@use 'src/styles/mixins';
+
 .Icon {
+  @include mixins.core;
   align-items: center;
   border-radius: 50%;
   display: flex;

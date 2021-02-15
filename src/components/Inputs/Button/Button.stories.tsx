@@ -8,7 +8,6 @@ import {
   ButtonType,
   ButtonVariant,
 } from './index';
-import './Button.scss';
 
 const meta: Meta = {
   title: 'Button',
@@ -17,11 +16,6 @@ const meta: Meta = {
     children: {
       control: 'text',
       defaultValue: 'Click me!',
-    },
-    className: {
-      control: {
-        type: 'text',
-      },
     },
     color: {
       control: {

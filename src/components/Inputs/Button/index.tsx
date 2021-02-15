@@ -2,6 +2,7 @@ import React, { HTMLAttributes, ReactNode, useEffect, useRef } from 'react';
 import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
+import '../../../styles/colors.css';
 import './Button.scss';
 
 export enum ButtonColor {
