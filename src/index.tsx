@@ -1,3 +1,9 @@
 import { Icon, IconType } from './components/Icon';
+import {
+  Button,
+  ButtonColor,
+  ButtonType,
+  ButtonVariant,
+} from './components/Inputs/Button';
 
-export { Icon, IconType };
+export { Button, ButtonColor, ButtonType, ButtonVariant, Icon, IconType };
