@@ -53,6 +53,6 @@ const Template: Story<ButtonProps> = props => <Button {...props} />;
 export const Default = Template.bind({});
 Default.args = {
   onClick() {
-    alert('You presseed me.');
+    alert('You pressed me.');
   },
 };

@@ -1,9 +1,19 @@
-import { Icon, IconType } from './components/Icon';
+import { Icon, IconProps, IconType } from './components/Icon';
 import {
   Button,
   ButtonColor,
+  ButtonProps,
   ButtonType,
   ButtonVariant,
 } from './components/Inputs/Button';
 
-export { Button, ButtonColor, ButtonType, ButtonVariant, Icon, IconType };
+export {
+  Button,
+  ButtonColor,
+  ButtonProps,
+  ButtonType,
+  ButtonVariant,
+  Icon,
+  IconProps,
+  IconType,
+};

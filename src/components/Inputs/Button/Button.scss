@@ -1,7 +1,7 @@
 @use 'src/styles/mixins';
 
 .Button {
-  @include mixins.core;
+  @include mixins.core-with-fonts;
   $self: &;
   border-radius: 3px;
   border-width: 1px;

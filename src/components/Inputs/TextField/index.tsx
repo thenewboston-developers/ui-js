@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
 import '../../../styles/colors.css';
+import '../../../styles/font.css';
 import './TextField.scss';
 
 export enum TextFieldType {
