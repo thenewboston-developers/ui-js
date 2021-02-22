@@ -1,4 +1,10 @@
-import React, { forwardRef, ReactNode, useCallback, useMemo } from 'react';
+import React, {
+  forwardRef,
+  HTMLAttributes,
+  ReactNode,
+  useCallback,
+  useMemo,
+} from 'react';
 import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
@@ -61,6 +67,7 @@ import TwitchIcon from 'mdi-react/TwitchIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
+import '../../styles/colors.css';
 import TnbIcon from './TnbIcon';
 import './Icon.scss';
 
@@ -127,7 +134,7 @@ export enum IconType {
   youtube = 'youtube',
 }
 
-export interface IconProps {
+export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   /** Optional. Extra classNames you can pass. Storybook options: black, white, primary, secondary, tertiary, alert. */
   className?: string;
   /** Optional. disabled onClick event if onClick is passed. */
