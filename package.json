@@ -67,6 +67,7 @@
     "@testing-library/user-event": "^12.6.3",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
+    "@types/react-select": "^4.0.13",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.2.2",
     "clsx": "^1.1.1",
@@ -88,6 +89,7 @@
   },
   "dependencies": {
     "@thenewboston/utils": "^1.0.0",
-    "mdi-react": "^7.4.0"
+    "mdi-react": "^7.4.0",
+    "react-select": "^4.1.0"
   }
 }

@@ -1,19 +1,12 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { TextField, TextFieldProps, TextFieldType } from './index';
+import { Select, SelectProps } from './index';
 
 const meta: Meta = {
-  title: 'TextField',
-  component: TextField,
-  argTypes: {
-    type: {
-      control: {
-        type: 'select',
-        options: TextFieldType,
-      },
-    },
-  },
+  title: 'Select',
+  component: Select,
+  argTypes: {},
   parameters: {
     controls: { expanded: true },
   },
@@ -21,7 +14,14 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<TextFieldProps> = props => <TextField {...props} />;
+const Template: Story<SelectProps> = props => (
+  <>
+    <div id="root">
+      <Select {...props} />
+    </div>
+    <div id="dropdown-root" />
+  </>
+);
 
 // By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
 // https://storybook.js.org/docs/react/workflows/unit-testing
