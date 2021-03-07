@@ -17,6 +17,7 @@ import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
 import ArrowRightIcon from 'mdi-react/ArrowRightIcon';
 import ArrowUpIcon from 'mdi-react/ArrowUpIcon';
 import BellIcon from 'mdi-react/BellIcon';
+import CheckCircleIcon from 'mdi-react/CheckCircleIcon';
 import CheckboxBlankCircleIcon from 'mdi-react/CheckboxBlankCircleIcon';
 import CheckboxBlankCircleOutlineIcon from 'mdi-react/CheckboxBlankCircleOutlineIcon';
 import CheckboxBlankOutlineIcon from 'mdi-react/CheckboxBlankOutlineIcon';
@@ -82,6 +83,7 @@ export enum IconType {
   arrowRight = 'arrow-right',
   arrowUp = 'arrow-up',
   bell = 'bell',
+  checkCircle = 'check-circle',
   checkboxBlankCircle = 'checkbox-blank-circle',
   checkboxBlankCircleOutline = 'checkbox-blank-circle-outline',
   checkboxBlankOutline = 'checkbox-blank-outline',
@@ -225,6 +227,8 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <ArrowUpIcon {...iconBaseProps} size={size || 24} />;
         case IconType.bell:
           return <BellIcon {...iconBaseProps} size={size || 22} />;
+        case IconType.checkCircle:
+          return <CheckCircleIcon {...iconBaseProps} size={size || 24} />;
         case IconType.checkboxBlankCircle:
           return (
             <CheckboxBlankCircleIcon {...iconBaseProps} size={size || 24} />
