@@ -151,6 +151,8 @@ export enum IconType {
 export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   /** Optional. Extra classNames you can pass. Storybook options: black, white, primary, secondary, tertiary, alert. */
   className?: string;
+  /** Optional. identifies a DOM node for testing purposes. */
+  dataTestId?: string;
   /** Optional. disabled onClick event if onClick is passed. */
   disabled?: boolean;
   /** Required. pass in the icon type, using the IconType enum. */
@@ -174,6 +176,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
   (
     {
       className,
+      dataTestId,
       disabled = false,
       icon,
       onClick,
@@ -376,7 +379,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           'Icon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),
         })}
-        data-testid="Icon"
+        data-testid={dataTestId || 'Icon'}
         ref={ref}
         role={!!onClick ? 'button' : 'img'}
         onClick={handleClick}
