@@ -9,6 +9,7 @@ import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
+import AlertCircleIcon from 'mdi-react/AlertCircleIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
 import AlertIcon from 'mdi-react/AlertIcon';
 import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
@@ -43,6 +44,8 @@ import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import HammerWrenchIcon from 'mdi-react/HammerWrenchIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
+import InformationIcon from 'mdi-react/InformationIcon';
+import InstagramIcon from 'mdi-react/InstagramIcon';
 import LanConnectIcon from 'mdi-react/LanConnectIcon';
 import LanDisconnectIcon from 'mdi-react/LanDisconnectIcon';
 import LinkIcon from 'mdi-react/LinkIcon';
@@ -51,6 +54,8 @@ import LoadingIcon from 'mdi-react/LoadingIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
+import NotebookCheckOutlineIcon from 'mdi-react/NotebookCheckOutlineIcon';
+import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 import PencilIcon from 'mdi-react/PencilIcon';
 import PlayIcon from 'mdi-react/PlayIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
@@ -62,6 +67,7 @@ import SlackIcon from 'mdi-react/SlackIcon';
 import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
 import SyncIcon from 'mdi-react/SyncIcon';
+import TextBoxIcon from 'mdi-react/TextBoxIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
 import TwitchIcon from 'mdi-react/TwitchIcon';
@@ -76,6 +82,7 @@ import './Icon.scss';
 export enum IconType {
   accountGroup = 'account-group',
   alert = 'alert',
+  alertCircle = 'alert-circle',
   alertCircleOutline = 'alert-circle-outline',
   arrowCollapseDown = 'arrow-collapse-down',
   arrowDown = 'arrow-down',
@@ -109,6 +116,8 @@ export enum IconType {
   github = 'github',
   hammerWrench = 'hammer-wrench',
   humanHandsup = 'human-handsup',
+  information = 'information',
+  instagram = 'instagram',
   lanConnect = 'lan-connect',
   lanDisconnect = 'lan-disconnect',
   link = 'link',
@@ -117,6 +126,8 @@ export enum IconType {
   menu = 'menu',
   menuRight = 'menu-right',
   minus = 'minus',
+  notebookCheckOutline = 'notebook-check-outline',
+  openInNew = 'open-in-new',
   pencil = 'pencil',
   play = 'play',
   plus = 'plus',
@@ -128,6 +139,7 @@ export enum IconType {
   sortAscending = 'sort-ascending',
   sortDescending = 'sort-descending',
   sync = 'sync',
+  textBox = 'text-box',
   thumbsUp = 'thumbs-up',
   tnb = 'tnb',
   trophy = 'trophy',
@@ -211,6 +223,8 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <AccountGroupIcon {...iconBaseProps} size={size || 24} />;
         case IconType.alert:
           return <AlertIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.alertCircle:
+          return <AlertCircleIcon {...iconBaseProps} size={size || 24} />;
         case IconType.alertCircleOutline:
           return (
             <AlertCircleOutlineIcon {...iconBaseProps} size={size || 24} />
@@ -288,6 +302,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <HammerWrenchIcon {...iconBaseProps} size={size || 24} />;
         case IconType.humanHandsup:
           return <HumanHandsupIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.information:
+          return <InformationIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.instagram:
+          return <InstagramIcon {...iconBaseProps} size={size || 24} />;
         case IconType.lanConnect:
           return <LanConnectIcon {...iconBaseProps} size={size || 24} />;
         case IconType.lanDisconnect:
@@ -304,6 +322,12 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <MenuRightIcon {...iconBaseProps} size={size || 24} />;
         case IconType.minus:
           return <MinusIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.notebookCheckOutline:
+          return (
+            <NotebookCheckOutlineIcon {...iconBaseProps} size={size || 24} />
+          );
+        case IconType.openInNew:
+          return <OpenInNewIcon {...iconBaseProps} size={size || 24} />;
         case IconType.pencil:
           return <PencilIcon {...iconBaseProps} size={size || 24} />;
         case IconType.play:
@@ -326,6 +350,8 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <SortDescendingIcon {...iconBaseProps} size={size || 22} />;
         case IconType.sync:
           return <SyncIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.textBox:
+          return <TextBoxIcon {...iconBaseProps} size={size || 20} />;
         case IconType.thumbsUp:
           return <ThumbsUpIcon {...iconBaseProps} size={size || 20} />;
         case IconType.tnb:
