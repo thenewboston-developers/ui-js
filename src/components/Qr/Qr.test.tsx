@@ -12,6 +12,13 @@ const baseProps = {
 };
 
 describe('Qr component', () => {
+  it('calls QrCode.toDataUrl once', async () => {
+    render(<Qr {...baseProps} />);
+
+    await screen.findByAltText('QR Code');
+    expect(QrCode.toDataURL).toHaveBeenCalledTimes(1);
+  });
+
   it('renders without crashing', async () => {
     render(<Qr {...baseProps} />);
 
@@ -31,13 +38,6 @@ describe('Qr component', () => {
 
     const el = await screen.findByAltText('QR Code');
     expect(el).toHaveClass('Test');
-  });
-
-  it('calls QrCode.toDataUrl once', async () => {
-    render(<Qr {...baseProps} />);
-
-    await screen.findByAltText('QR Code');
-    expect(QrCode.toDataURL).toHaveBeenCalledTimes(1);
   });
 
   it('calls QrCode.toDataUrl with default properties', async () => {
