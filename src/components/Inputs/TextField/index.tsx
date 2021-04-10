@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, FocusEvent, useEffect, useRef } from 'react';
+import React, { ChangeEvent, FocusEvent, useEffect, useRef } from 'react';
 import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
@@ -12,19 +12,32 @@ export enum TextFieldType {
 }
 
 export interface TextFieldProps {
+  /** Optional. Extra classNames you can pass. */
   className?: string;
+  /** Optional. Disables the input. */
   disabled?: boolean;
+  /** Optional. Places a red outline. */
   error?: boolean;
+  /** Optional. Determines if input is focused. */
   focused?: boolean;
+  /** Optional. Name of input for forms. */
   name?: string;
+  /** Optional. Adds an onBlur event handler. */
   onBlur?(e: FocusEvent<HTMLInputElement>): void;
+  /** Optional. Adds an onChange event handler. Goes with 'value' to make it a controlled input. */
   onChange?(e: ChangeEvent<HTMLInputElement>): void;
+  /** Optional. input placeholder. */
   placeholder?: string;
+  /** Optional. Input type. */
   type?: TextFieldType;
+  /** Optional. Value of the input. Goes with 'onChange' to make it a controlled input. */
   value?: string;
 }
 
-const TextField: FC<TextFieldProps> = ({
+/**
+ * A TextField Input component.
+ */
+const TextField = function({
   className,
   disabled = false,
   error = false,
@@ -35,7 +48,7 @@ const TextField: FC<TextFieldProps> = ({
   placeholder = 'Enter',
   type = TextFieldType.text,
   value,
-}) => {
+}: TextFieldProps) {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
