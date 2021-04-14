@@ -57,6 +57,7 @@ import MinusIcon from 'mdi-react/MinusIcon';
 import NotebookCheckOutlineIcon from 'mdi-react/NotebookCheckOutlineIcon';
 import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 import PencilIcon from 'mdi-react/PencilIcon';
+import PlayBoxMultipleIcon from 'mdi-react/PlayBoxMultipleIcon';
 import PlayIcon from 'mdi-react/PlayIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
@@ -130,6 +131,7 @@ export enum IconType {
   openInNew = 'open-in-new',
   pencil = 'pencil',
   play = 'play',
+  playBoxMultiple = 'playBoxMultiple',
   plus = 'plus',
   radioboxBlank = 'radiobox-blank',
   radioboxMarked = 'radiobox-marked',
@@ -335,6 +337,8 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <PencilIcon {...iconBaseProps} size={size || 24} />;
         case IconType.play:
           return <PlayIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.playBoxMultiple:
+          return <PlayBoxMultipleIcon {...iconBaseProps} size={size || 24} />;
         case IconType.plus:
           return <PlusIcon {...iconBaseProps} size={size || 24} />;
         case IconType.radioboxBlank:
