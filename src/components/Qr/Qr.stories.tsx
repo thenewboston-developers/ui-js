@@ -6,7 +6,7 @@ import '../../styles/colors.css';
 
 const meta: Meta = {
   title: 'Qr',
-  component: Qr as any,
+  component: Qr,
   argTypes: {},
   parameters: {
     controls: { expanded: true },

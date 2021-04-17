@@ -3,12 +3,19 @@ import clsx from 'clsx';
 import QrCode from 'qrcode';
 
 export interface QrProps {
+  /** Optional. Extra classNames you can pass. */
   className?: string;
+  /** Optional. margin for QR component. */
   margin?: number;
+  /** Required. The content for QR code. */
   text: string;
+  /** Optional. width size. */
   width?: number;
 }
 
+/**
+ * Qr component.
+ */
 const Qr: FC<QrProps> = ({ className, margin = 0, text, width = 140 }) => {
   const [qr, setQr] = useState<ReactNode | null>(null);
 
