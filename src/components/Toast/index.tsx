@@ -8,10 +8,15 @@ import './Toast.scss';
 export type ToastType = 'success' | 'warning';
 
 export interface ToastProps {
+  /** Optional. Extra classNames you can pass. */
   className?: string;
+  /** Required. The type for Toast component. */
   type: ToastType;
 }
 
+/**
+ * Toast component.
+ */
 const Toast: FC<ToastProps> = ({ children, className, type = 'warning' }) => {
   const iconType = useMemo<IconType>(() => {
     switch (type) {

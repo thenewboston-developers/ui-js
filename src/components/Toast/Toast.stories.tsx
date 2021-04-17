@@ -8,7 +8,7 @@ import './Toast.scss';
 
 const meta: Meta = {
   title: 'Toast',
-  component: Toast as any,
+  component: Toast,
   argTypes: {},
   parameters: {
     controls: { expanded: true },
