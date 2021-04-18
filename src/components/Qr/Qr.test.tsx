@@ -47,7 +47,7 @@ describe('Qr component', () => {
     expect(QrCode.toDataURL).toBeCalledWith(baseProps.text, {
       color: {
         dark: '#000000',
-        light: '#0000',
+        light: '#ffffff',
       },
       margin: 0,
       width: 140,
@@ -61,7 +61,7 @@ describe('Qr component', () => {
     expect(QrCode.toDataURL).toBeCalledWith(baseProps.text, {
       color: {
         dark: '#000000',
-        light: '#0000',
+        light: '#ffffff',
       },
       margin: 10,
       width: 140,
@@ -75,7 +75,7 @@ describe('Qr component', () => {
     expect(QrCode.toDataURL).toBeCalledWith(baseProps.text, {
       color: {
         dark: '#000000',
-        light: '#0000',
+        light: '#ffffff',
       },
       margin: 0,
       width: 160,
