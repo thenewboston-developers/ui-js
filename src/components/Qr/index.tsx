@@ -24,7 +24,7 @@ const Qr: FC<QrProps> = ({ className, margin = 0, text, width = 140 }) => {
       const url = await QrCode.toDataURL(text, {
         color: {
           dark: '#000000',
-          light: '#0000',
+          light: '#ffffff',
         },
         margin,
         width,
