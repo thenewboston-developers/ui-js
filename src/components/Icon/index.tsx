@@ -9,6 +9,7 @@ import clsx from 'clsx';
 import { bemify } from '@thenewboston/utils';
 
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
+import AlertCircleCheckOutlineIcon from 'mdi-react/AlertCircleCheckOutlineIcon';
 import AlertCircleIcon from 'mdi-react/AlertCircleIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
 import AlertIcon from 'mdi-react/AlertIcon';
@@ -18,6 +19,7 @@ import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
 import ArrowRightIcon from 'mdi-react/ArrowRightIcon';
 import ArrowUpIcon from 'mdi-react/ArrowUpIcon';
 import BellIcon from 'mdi-react/BellIcon';
+import ChartTimelineVariantShimmer from 'mdi-react/ChartTimelineVariantShimmerIcon';
 import CheckCircleIcon from 'mdi-react/CheckCircleIcon';
 import CheckboxBlankCircleIcon from 'mdi-react/CheckboxBlankCircleIcon';
 import CheckboxBlankCircleOutlineIcon from 'mdi-react/CheckboxBlankCircleOutlineIcon';
@@ -84,6 +86,7 @@ export enum IconType {
   accountGroup = 'account-group',
   alert = 'alert',
   alertCircle = 'alert-circle',
+  alertCircleCheckOutline = 'alert-circle-check-outline',
   alertCircleOutline = 'alert-circle-outline',
   arrowCollapseDown = 'arrow-collapse-down',
   arrowDown = 'arrow-down',
@@ -91,6 +94,7 @@ export enum IconType {
   arrowRight = 'arrow-right',
   arrowUp = 'arrow-up',
   bell = 'bell',
+  chartTimelineVariantShimmer = 'chart-timeline-variant-shimmer',
   checkCircle = 'check-circle',
   checkboxBlankCircle = 'checkbox-blank-circle',
   checkboxBlankCircleOutline = 'checkbox-blank-circle-outline',
@@ -228,6 +232,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <AccountGroupIcon {...iconBaseProps} size={size || 24} />;
         case IconType.alert:
           return <AlertIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.alertCircleCheckOutline:
+          return (
+            <AlertCircleCheckOutlineIcon {...iconBaseProps} size={size || 24} />
+          );
         case IconType.alertCircle:
           return <AlertCircleIcon {...iconBaseProps} size={size || 24} />;
         case IconType.alertCircleOutline:
@@ -246,6 +254,10 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <ArrowUpIcon {...iconBaseProps} size={size || 24} />;
         case IconType.bell:
           return <BellIcon {...iconBaseProps} size={size || 22} />;
+        case IconType.chartTimelineVariantShimmer:
+          return (
+            <ChartTimelineVariantShimmer {...iconBaseProps} size={size || 24} />
+          );
         case IconType.checkCircle:
           return <CheckCircleIcon {...iconBaseProps} size={size || 24} />;
         case IconType.checkboxBlankCircle:
