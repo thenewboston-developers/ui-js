@@ -154,7 +154,7 @@ export enum IconType {
   youtube = 'youtube',
 }
 
-export interface IconProps extends HTMLAttributes<HTMLDivElement> {
+export interface IconProps extends HTMLAttributes<HTMLSpanElement> {
   /** Optional. Extra classNames you can pass. Storybook options: black, white, primary, secondary, tertiary, alert. */
   className?: string;
   /** Optional. identifies a DOM node for testing purposes. */
@@ -164,9 +164,9 @@ export interface IconProps extends HTMLAttributes<HTMLDivElement> {
   /** Required. pass in the icon type, using the IconType enum. */
   icon: IconType;
   /** Optional. add an onClick event handler. */
-  onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
+  onClick?(e?: React.MouseEvent<HTMLSpanElement, MouseEvent>): void;
   /** Optional. add an onKeyDown event handler. */
-  onKeyDown?(e?: React.KeyboardEvent<HTMLDivElement>): void;
+  onKeyDown?(e?: React.KeyboardEvent<HTMLSpanElement>): void;
   /** Optional. size of the actual icon. */
   size?: number;
   /** Optional. size of the icon + paddings. Ignored if value is smaller than size.  */
@@ -178,7 +178,7 @@ export interface IconProps extends HTMLAttributes<HTMLDivElement> {
 /**
  * Icon component with optional ability to pass in an onClick event handler.
  */
-const Icon = forwardRef<HTMLDivElement, IconProps>(
+const Icon = forwardRef<HTMLSpanElement, IconProps>(
   (
     {
       className,
@@ -205,14 +205,14 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
     );
 
     const handleClick = (
-      e?: React.MouseEvent<HTMLDivElement, MouseEvent>
+      e?: React.MouseEvent<HTMLSpanElement, MouseEvent>
     ): void => {
       if (disabled || !onClick) return;
 
       onClick(e);
     };
 
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>): void => {
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLSpanElement>): void => {
       if (!onClick) return;
 
       if (e.key === 'Enter' && !disabled) {
@@ -389,7 +389,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
     }, [icon, size]);
 
     return (
-      <div
+      <span
         className={clsx('Icon', className, {
           'Icon--button': !!onClick,
           'Icon--disabled': disabled,
@@ -404,7 +404,7 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
         tabIndex={tabIndex}
       >
         {renderIcon()}
-      </div>
+      </span>
     );
   }
 );
