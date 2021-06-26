@@ -19,6 +19,7 @@ import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
 import ArrowRightIcon from 'mdi-react/ArrowRightIcon';
 import ArrowUpIcon from 'mdi-react/ArrowUpIcon';
 import BellIcon from 'mdi-react/BellIcon';
+import ChartAreasplineIcon from 'mdi-react/ChartAreasplineIcon';
 import ChartTimelineVariantShimmer from 'mdi-react/ChartTimelineVariantShimmerIcon';
 import CheckCircleIcon from 'mdi-react/CheckCircleIcon';
 import CheckboxBlankCircleIcon from 'mdi-react/CheckboxBlankCircleIcon';
@@ -94,6 +95,7 @@ export enum IconType {
   arrowRight = 'arrow-right',
   arrowUp = 'arrow-up',
   bell = 'bell',
+  chartAreaspline = 'chart-areaspline',
   chartTimelineVariantShimmer = 'chart-timeline-variant-shimmer',
   checkCircle = 'check-circle',
   checkboxBlankCircle = 'checkbox-blank-circle',
@@ -254,6 +256,8 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <ArrowUpIcon {...iconBaseProps} size={size || 24} />;
         case IconType.bell:
           return <BellIcon {...iconBaseProps} size={size || 22} />;
+        case IconType.chartAreaspline:
+          return <ChartAreasplineIcon {...iconBaseProps} size={size || 24} />;
         case IconType.chartTimelineVariantShimmer:
           return (
             <ChartTimelineVariantShimmer {...iconBaseProps} size={size || 24} />
