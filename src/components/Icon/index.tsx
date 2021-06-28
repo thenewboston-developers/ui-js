@@ -60,6 +60,7 @@ import MinusIcon from 'mdi-react/MinusIcon';
 import NotebookCheckOutlineIcon from 'mdi-react/NotebookCheckOutlineIcon';
 import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 import PencilIcon from 'mdi-react/PencilIcon';
+import PinterestIcon from 'mdi-react/PinterestIcon';
 import PlayBoxMultipleIcon from 'mdi-react/PlayBoxMultipleIcon';
 import PlayIcon from 'mdi-react/PlayIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
@@ -136,6 +137,7 @@ export enum IconType {
   notebookCheckOutline = 'notebook-check-outline',
   openInNew = 'open-in-new',
   pencil = 'pencil',
+  pinterest = 'pinterest',
   play = 'play',
   playBoxMultiple = 'playBoxMultiple',
   plus = 'plus',
@@ -351,6 +353,8 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <OpenInNewIcon {...iconBaseProps} size={size || 24} />;
         case IconType.pencil:
           return <PencilIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.pinterest:
+          return <PinterestIcon {...iconBaseProps} size={size || 24} />;
         case IconType.play:
           return <PlayIcon {...iconBaseProps} size={size || 24} />;
         case IconType.playBoxMultiple:
