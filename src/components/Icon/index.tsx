@@ -64,6 +64,7 @@ import PinterestIcon from 'mdi-react/PinterestIcon';
 import PlayBoxMultipleIcon from 'mdi-react/PlayBoxMultipleIcon';
 import PlayIcon from 'mdi-react/PlayIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
+import QrcodeIcon from 'mdi-react/QrcodeIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
 import RadioboxMarkedIcon from 'mdi-react/RadioboxMarkedIcon';
 import RedditIcon from 'mdi-react/RedditIcon';
@@ -141,6 +142,7 @@ export enum IconType {
   play = 'play',
   playBoxMultiple = 'playBoxMultiple',
   plus = 'plus',
+  qrcode = 'qrcode',
   radioboxBlank = 'radiobox-blank',
   radioboxMarked = 'radiobox-marked',
   reddit = 'reddit',
@@ -361,6 +363,8 @@ const Icon = forwardRef<HTMLDivElement, IconProps>(
           return <PlayBoxMultipleIcon {...iconBaseProps} size={size || 24} />;
         case IconType.plus:
           return <PlusIcon {...iconBaseProps} size={size || 24} />;
+        case IconType.qrcode:
+          return <QrcodeIcon {...iconBaseProps} size={size || 24} />;
         case IconType.radioboxBlank:
           return <RadioboxBlankIcon {...iconBaseProps} size={size || 24} />;
         case IconType.radioboxMarked:
